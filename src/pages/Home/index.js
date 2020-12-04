@@ -10,17 +10,28 @@ const List = styled.ul`
 `
 
 function Home() {
+  const [addresses, setAddresses] = useState(null);
   const [addressesArray, setAddressesArray] = useState(null);
+
+  const getAddresses = (addresses) => {
+    const array = Object.values(addresses);
+
+    setAddresses(addresses);
+    setAddressesArray(array.sort((a, b) => (b.id - a.id)));
+  }
 
   useEffect(() => {
     const addresses = JSON.parse(localStorage.getItem('addresses') || '{}');
-    const array = Object.values(addresses);
 
-    setAddressesArray(array.sort((a, b) => (b.id - a.id)));
+    getAddresses(addresses);
   }, []);
 
   const handleClickOnDelete = id => {
-    alert(`delete: ${id}`);
+    let newAddresses = {...addresses};
+
+    delete newAddresses[id];
+    localStorage.setItem('addresses', JSON.stringify(newAddresses));
+    getAddresses(newAddresses);
   }
 
   return (

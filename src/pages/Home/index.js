@@ -15,9 +15,11 @@ function Home() {
 
   const getAddresses = (addresses) => {
     const array = Object.values(addresses);
+    const sortedById = array.sort((a, b) => (b.id - a.id));
+    const sortedByTypes = sortedById.sort((a, b) => (b.address_types.length - a.address_types.length));
 
     setAddresses(addresses);
-    setAddressesArray(array.sort((a, b) => (b.id - a.id)));
+    setAddressesArray(sortedByTypes);
   }
 
   useEffect(() => {

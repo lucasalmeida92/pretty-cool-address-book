@@ -25,6 +25,7 @@ const Title = styled.h1`
 const Logo = styled.img`
   height: 33px;
   margin-right: 16px;
+  image-rendering: pixelated;
 `;
 
 const Header = () => (

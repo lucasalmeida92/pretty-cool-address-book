@@ -8,6 +8,10 @@ const Wrapper = styled.li`
   margin: 16px 0;
   border-radius: 16px;
   box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+
+  p {
+    color: #888;
+  }
 `
 
 const Name = styled.h2`

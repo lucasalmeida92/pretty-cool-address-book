@@ -11,11 +11,15 @@ const Container = styled.header`
 `;
 
 const Title = styled.h1`
-  display: flex;
-  align-items: center;
-  font-weight: 900;
-  font-size: 20px;
   margin: 0;
+
+  a {
+    display: flex;
+    align-items: center;
+    font-weight: 900;
+    font-size: 20px;
+    color: #333;
+  }
 `;
 
 const Logo = styled.img`
@@ -26,8 +30,10 @@ const Logo = styled.img`
 const Header = () => (
   <Container>
     <Title>
-      <Logo src={logo} alt="Logo" />
-      <span>Pretty Cool Address Book</span>
+      <a href="/" title="Pretty Cool Address Book">
+        <Logo src={logo} alt="Logo" />
+        <span>Pretty Cool Address Book</span>
+      </a>
     </Title>
   </Container>
 )

@@ -16,6 +16,17 @@ code {
     monospace;
 }
 
+a {
+  text-decoration: none;
+  color: #fda085;
+}
+
+ul, li {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
 label {
   color: #666;
 }
@@ -31,4 +42,11 @@ select {
 
 select {
   padding: 8px 16px;
+}
+
+input[type="checkbox"] {
+  width: 16px;
+  height: 16px;
+  margin: 8px;
+  transform: translateY(2px);
 }

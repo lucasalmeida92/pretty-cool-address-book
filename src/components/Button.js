@@ -3,8 +3,8 @@ import styled from 'styled-components';
 const Button = styled.button`
   margin: 10px;
   padding: 8px 16px;
-  min-width: 120px;
-  height: 56px;
+  min-width: ${({ small }) => small ? 'auto': '120px'};
+  height: ${({ small }) => small ? '33px': '56px'};
   text-align: center;
   text-transform: uppercase;
   transition: 0.5s;

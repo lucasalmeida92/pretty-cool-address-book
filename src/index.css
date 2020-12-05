@@ -19,7 +19,14 @@ code {
 a {
   text-decoration: none;
   color: #fda085;
+  transition: all ease-out 200ms;
 }
+
+a:hover {
+  text-decoration: underline;
+  color: #e96845;
+}
+
 
 ul, li {
   margin: 0;

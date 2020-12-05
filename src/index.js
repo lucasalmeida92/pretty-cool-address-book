@@ -12,6 +12,7 @@ import './index.css';
 import Layout from './layouts/Default';
 import Home from './pages/Home';
 import CreateAddress from './pages/CreateAddress';
+import EditAddress from './pages/EditAddress';
 
 const theme = {};
 
@@ -23,6 +24,7 @@ ReactDOM.render(
           <Switch>
             <Route exact path="/"><Home /></Route>
             <Route exact path="/create-address"><CreateAddress /></Route>
+            {/* <Route exact path="/edit-address/:id"><EditAddress /></Route> */}
             <Redirect to="/" />
           </Switch>
         </Layout>

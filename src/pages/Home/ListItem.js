@@ -43,8 +43,8 @@ const ListItem = (props) => {
       <Address>{address} - {zip_code}</Address>
       <p>{city}/{uf}</p>
       <p>Type(s): {address_types ? address_types.join(', ') : '-'}</p>
-      <Button small as={Link} to={`/edit-address/${id}`}>Edit</Button>
-      <Button small onClick={() => handleClickOnDelete(id)}>Delete</Button>
+      <Button small="true" as={Link} to={`/edit-address/${id}`}>Edit</Button>
+      <Button small="true" onClick={() => handleClickOnDelete(id)}>Delete</Button>
     </Wrapper>
   );
 }

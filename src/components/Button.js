@@ -7,7 +7,7 @@ const Button = styled.button`
   height: ${({ small }) => small ? '33px': '56px'};
   text-align: center;
   text-transform: uppercase;
-  transition: 0.5s;
+  transition: 350ms;
   background-size: 200% auto;
   color: white;
   font-weight: 700;
